@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <group android:checkableBehavior="single">
+    <item
+      android:id="@+id/nav_home"
+      android:icon="@mipmap/ic_home"
+      android:title="@string/home" />
+<!--    <item
+      android:id="@+id/nav_routes"
+      android:icon="@mipmap/ic_route"
+      android:title="@string/routes" />-->
+    <item
+      android:visible="true"
+      android:id="@+id/nav_orders"
+      android:icon="@mipmap/ic_order"
+      android:title="@string/orders" />
+    <item
+      android:id="@+id/nav_customers"
+      android:icon="@mipmap/ic_customer"
+      android:title="@string/customers" />
+    <item
+      android:visible="true"
+      android:id="@+id/nav_products"
+      android:icon="@mipmap/ic_product"
+      android:title="@string/products" />
+<!--    <item
+      android:visible="true"
+      android:id="@+id/nav_messages"
+      android:icon="@mipmap/ic_message"
+      android:title="@string/messages" />
+    <item
+      android:visible="true"
+      android:id="@+id/nav_expenses"
+      android:icon="@mipmap/ic_dollar"
+      android:title="@string/expense" />
+    <item
+      android:visible="true"
+      android:id="@+id/nav_tasks"
+      android:icon="@mipmap/ic_task"
+      android:title="@string/tasks" />
+    <item
+      android:id="@+id/nav_profile"
+      android:icon="@mipmap/ic_profile"
+      android:title="@string/settings" />
+
+    <item
+      android:visible="false"
+      android:id="@+id/nav_order_item_status"
+      android:icon="@mipmap/ic_order"
+      android:title="Order status" />
+    <item
+      android:id="@+id/nav_settings"
+      android:icon="@mipmap/ic_order"
+      android:visible="false"
+      android:title="Settings" />
+
+    <item
+      android:visible="false"
+      android:id="@+id/nav_map"
+      android:icon="@mipmap/ic_logout"
+      android:title="@string/title_activity_maps" />
+    <item
+      android:visible="true"
+      android:id="@+id/nav_notif"
+      android:icon="@mipmap/ic_notif"
+      android:title="@string/notifications" />-->
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@mipmap/ic_logout"
+        android:title="@string/logout" />
+  </group>
+
+</menu>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/collection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:elevation="3dp"
+    tools:context="com.kraftlabs.crm_new.Adapters.CollectionListAdapter"
+    tools:targetApi="lollipop">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="@dimen/profile_image_size_small"
+        android:layout_height="@dimen/profile_image_size_small"
+        android:layout_margin="5dp"
+        android:elevation="3dp"
+        android:src="@mipmap/ic_dollar"
+        app:riv_corner_radius="@dimen/profile_image_size_small"
+        tools:targetApi="lollipop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/small_margin">
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/amount"
+            android:paddingLeft="@dimen/small_margin"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/paymentMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/amount"
+            android:text="@string/payment_mode"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/txtPaymentMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAmount"
+            android:layout_toRightOf="@id/paymentMode"
+            android:paddingLeft="@dimen/small_margin"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paymentMode"
+            android:text="@string/date"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paymentMode"
+            android:layout_toRightOf="@+id/date"
+            android:paddingLeft="@dimen/small_margin"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/cdhDdNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            android:text="@string/chq_dd_no" />
+
+        <TextView
+            android:id="@+id/txtBillNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDate"
+            android:layout_toRightOf="@id/cdhDdNo"
+            android:paddingLeft="@dimen/small_margin"
+            android:textColor="@color/textColor"
+            android:typeface="sans" />
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/small_margin"
+            android:layout_gravity="top"
+            android:text=""
+            android:textSize="@dimen/font_size_small" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

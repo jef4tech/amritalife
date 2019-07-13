@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   
+    tools:context="com.kraftlabs.crm_new.Fragments.OrderItemStatusFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lstOrderItemStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_margin"
+        android:divider="@android:color/transparent"
+        app:fastScrollEnabled="true"
+        app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
+        app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+        app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"
+        app:fastScrollVerticalTrackDrawable="@drawable/line_drawable" />
+
+    <TextView
+        android:id="@+id/txtOrderStatusEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productHint"
+        android:layout_margin="@dimen/small_margin"
+        android:text="@string/empty_product"
+        android:textAlignment="center"
+        android:textColor="@color/textColorSecondary"
+        android:visibility="gone" />
+</RelativeLayout>

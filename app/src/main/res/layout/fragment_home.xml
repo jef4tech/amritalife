@@ -1,0 +1,195 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/windowBackGround"
+    tools:context="com.kraftlabs.crm_new.Fragments.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/homeLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/calls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/txtCallHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/heading"
+                android:drawableRight="@mipmap/ic_keyboard_arrow_down_blue_24dp"
+                android:text="@string/todays_calls"
+                android:textAllCaps="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/font_size"
+                app:srcCompat="@mipmap/ic_keyboard_arrow_down_blue_24dp" />
+
+            <com.kraftlabs.crm_new.libs.expandableLayout.ExpandableLayout.ExpandableLayout
+                android:id="@+id/expandable_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCallHeading"
+                app:el_duration="600"
+                app:el_expanded="true"
+                app:el_parallax="0.5">
+
+                <android.support.v7.widget.RecyclerView
+
+                    android:id="@+id/lstCall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCallHeading"
+                    android:layout_margin="@dimen/small_margin"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="10dp"
+                    android:nestedScrollingEnabled="true" />
+
+                <TextView
+                    android:id="@+id/txtCallEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCallHeading"
+                    android:layout_margin="@dimen/small_margin"
+                    android:text="@string/empty_call"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorSecondary"
+                    android:visibility="gone" />
+            </com.kraftlabs.crm_new.libs.expandableLayout.ExpandableLayout.ExpandableLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tasks"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calls"
+            android:layout_marginTop="@dimen/small_margin"
+            android:background="@drawable/box"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/txtTaskHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/heading"
+                android:drawableRight="@mipmap/ic_keyboard_arrow_down_blue_24dp"
+                android:text="@string/todays_tasks"
+                android:textAllCaps="true"
+                android:textColor="@color/textColor"
+                app:srcCompat="@mipmap/ic_keyboard_arrow_down_blue_24dp"
+                android:textSize="@dimen/font_size" />
+
+            <com.kraftlabs.crm_new.libs.expandableLayout.ExpandableLayout.ExpandableLayout
+                android:id="@+id/expandable_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTaskHeading"
+                app:el_duration="600"
+                app:el_expanded="false"
+                app:el_parallax="0.5">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lstTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTaskHeading"
+                    android:layout_margin="@dimen/small_margin"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="10dp"
+                    android:nestedScrollingEnabled="true" />
+
+                <TextView
+                    android:id="@+id/txtTaskEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTaskHeading"
+                    android:layout_margin="@dimen/small_margin"
+                    android:text="@string/empty_task"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorSecondary"
+                    android:visibility="gone" />
+
+            </com.kraftlabs.crm_new.libs.expandableLayout.ExpandableLayout.ExpandableLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/leads"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tasks"
+            android:layout_marginTop="@dimen/small_margin"
+            android:background="@drawable/box"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/txtLeadHeading"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/heading"
+                android:drawableRight="@mipmap/ic_keyboard_arrow_down_blue_24dp"
+                android:text="@string/new_leads"
+                android:textAllCaps="true"
+                android:textColor="@color/textColor"
+                app:srcCompat="@mipmap/ic_keyboard_arrow_down_blue_24dp"
+                android:textSize="@dimen/font_size" />
+
+            <com.kraftlabs.crm_new.libs.expandableLayout.ExpandableLayout.ExpandableLayout
+                android:id="@+id/expandable_layout_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtLeadHeading"
+                app:el_duration="600"
+                app:el_expanded="false"
+                app:el_parallax="0.5">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lstLead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtLeadHeading"
+                    android:layout_margin="@dimen/small_margin"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="10dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:id="@+id/txtLeadEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtLeadHeading"
+                    android:layout_margin="@dimen/small_margin"
+                    android:text="@string/empty_lead"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorSecondary"
+                    android:visibility="gone" />
+            </com.kraftlabs.crm_new.libs.expandableLayout.ExpandableLayout.ExpandableLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/small_margin"
+        app:fabSize="auto"
+        android:background="@color/colorPrimaryLight"
+        app:srcCompat="@mipmap/ic_plus_white" />
+
+</FrameLayout>

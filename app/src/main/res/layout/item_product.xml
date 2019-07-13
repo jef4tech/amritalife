@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/product"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/vertical_spacing">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="@dimen/profile_image_size_small"
+        android:layout_height="@dimen/profile_image_size_small"
+        android:layout_marginTop="@dimen/vertical_spacing"
+        android:src="@mipmap/ic_product" />
+
+    <TextView
+        android:id="@+id/txtProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size" />
+
+    <TextView
+        android:id="@+id/txtProductCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtProductName"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/txtCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtProductCode"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCategory"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size_small" />
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgAction"
+        android:layout_width="@dimen/button_radius"
+        android:layout_height="@dimen/button_radius"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_plus"
+        android:textSize="@dimen/font_size_small" />
+</RelativeLayout>

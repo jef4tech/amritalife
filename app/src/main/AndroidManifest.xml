@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="com.kraftlabs.crm_new">
+
+  <supports-screens
+    android:anyDensity="true"
+    android:largeScreens="true"
+    android:normalScreens="true"
+    android:smallScreens="true" />
+
+  <uses-permission android:name="android.permission.CAMERA" />
+  <!--uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /-->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.GET_TASKS" />
+
+  <uses-feature
+    android:name="android.hardware.location.gps"
+    android:required="true" />
+  <uses-feature
+    android:name="android.hardware.camera"
+    android:required="true" />
+
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+  <application
+    android:name="com.kraftlabs.crm_new.globalexceptionhandler.MyApp"
+    android:allowBackup="true"
+    android:hardwareAccelerated="false"
+    android:icon="@mipmap/ic_amritalife"
+    android:label="@string/app_name"
+    android:largeHeap="true"
+    android:persistent="true"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme"
+    tools:ignore="GoogleAppIndexingWarning">
+
+    <!-- tools:node="replace" -->
+
+    <activity
+      android:name="com.kraftlabs.crm_new.Activities.SalesRepActivity"
+      android:label="@string/app_name"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+      android:name="com.kraftlabs.crm_new.Activities.LoginActivity"
+      android:label="@string/app_name"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+      android:name="com.kraftlabs.crm_new.Activities.MainActivity"
+      android:label="@string/app_name"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+
+    <service android:name="com.kraftlabs.crm_new.Services.FirebaseServices.MyFirebaseMessagingService">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+      </intent-filter>
+    </service>
+    <service android:name="com.kraftlabs.crm_new.Services.FirebaseServices.MyFirebaseInstanceIDService">
+      <intent-filter>
+        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+      </intent-filter>
+    </service>
+
+
+  <!--  <receiver android:name="com.kraftlabs.crm_new.BroadcastReceiver.BootReciever">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+      </intent-filter>
+    </receiver>
+
+    <service
+        android:name=".Services.LocationService"
+        android:exported="true"
+        android:permission="android.permission.BIND_JOB_SERVICE" />  -->
+
+
+
+    <!--<service
+      android:name=".ABC_LocationTacker.GpsService"
+      android:enabled="true"
+      android:exported="true" />-->
+
+    <!-- <service
+       android:name=".Services.TimeService"
+       android:enabled="true" />-->
+
+
+    <!--<provider
+      android:name=" .core.context.FileProvider"
+      android:authorities="com.example.android.fileprovider"
+      android:exported="false"
+      android:grantUriPermissions="true">
+      <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_paths" />
+    </provider>-->
+
+    <!--<provider
+      android:name="com.kraftlabs.crm_new.LocationTracker.database.LocContentProvider"
+      android:authorities="com.yyl.locationservice.database" />-->
+
+    
+    <!--TODO:Uncomment for location tracking-->
+    <!--Location track-->
+ <!--   <service
+      android:enabled="true"
+      android:name=".LocationTracker.UpdateLocation" />
+    <service android:name=".LocationTracker.TimeService"
+      android:enabled="true"/>
+
+     <receiver android:name=".LocationTracker.AlarmReceiver"></receiver>
+    <receiver
+       android:name=".LocationTracker.TrackLocationReciever"
+       android:enabled="true"
+       android:exported="true"
+       android:label="RestartServiceWhenStopped">
+       <intent-filter>
+         <action android:name=".Services.TrackLocationReciever" />
+       </intent-filter>
+     </receiver>
+
+   <receiver
+      android:name=".LocationTracker.ServiceRestarterBroadcastReceiver"
+      android:enabled="true"
+      android:exported="true"
+      android:label="RestartServiceWhenStopped">
+      <intent-filter>
+        <action android:name=".Services.ServiceRestarterBroadcastReceiver" />
+      </intent-filter>
+    </receiver> -->
+
+  </application>
+
+</manifest>

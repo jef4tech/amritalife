@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/despatchedTabInvoicesDetails"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:elevation="5dp"
+    android:orientation="vertical"
+    android:padding="3dp"
+    tools:context="com.kraftlabs.crm_new.Adapters.DespatchTabAdapter"
+    tools:targetApi="lollipop">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="@dimen/profile_image_size_small"
+        android:layout_height="@dimen/profile_image_size_small"
+        android:layout_marginRight="5dp"
+        android:padding="5dip"
+        android:src="@mipmap/ic_product"
+        app:riv_corner_radius="@dimen/profile_image_size_small" />
+
+    <TextView
+        android:id="@+id/txtProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/thumbnail"
+        android:textColor="@color/textColor"
+        android:textSize="15dp" />
+    <!--ItemPArent-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtProductName"
+        android:layout_toRightOf="@id/thumbnail"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4">
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quantity"
+                android:textSize="@dimen/font_size_small" />
+
+            <TextView
+                android:id="@+id/txtQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/quantity"
+                android:gravity="right"
+                android:text="ee"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/font_size_small" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+
+                android:id="@+id/lrNoDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:text="@string/lrno_date"
+                android:textSize="@dimen/font_size_small" />
+
+
+            <TextView
+                android:id="@+id/txtLrNoDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_toRightOf="@+id/lrNoDate"
+                android:text="lrno / 30-12-2017"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/font_size_small" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

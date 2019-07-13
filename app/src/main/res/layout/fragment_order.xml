@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kraftlabs.crm_new.Fragments.OrderFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      android:fastScrollEnabled="true"
+      android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/drafts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box">
+
+                <TextView
+                    android:id="@+id/txtDraftHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/heading"
+                    android:text="@string/drafts"
+                    android:textAllCaps="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/font_size" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lstDrafts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDraftHeading"
+                    android:layout_margin="@dimen/small_margin"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="10dp"
+                  android:nestedScrollingEnabled="false"
+                  app:fastScrollEnabled="true"
+                    app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
+                    app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+                    app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"
+                    app:fastScrollVerticalTrackDrawable="@drawable/line_drawable"/>
+
+                <TextView
+                    android:id="@+id/txtDraftEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDraftHeading"
+                    android:layout_margin="@dimen/small_margin"
+                    android:text="@string/empty_order"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorSecondary"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/orders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/drafts"
+                android:layout_marginTop="@dimen/small_margin"
+                android:background="@drawable/box">
+
+                <TextView
+                    android:id="@+id/txtHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/heading"
+                    android:text="@string/orders"
+                    android:textAllCaps="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/font_size" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lstOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtHeading"
+                    android:layout_margin="@dimen/small_margin"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="10dp"
+                    app:fastScrollEnabled="true"
+                  android:nestedScrollingEnabled="false"
+                  app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
+                    app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+                    app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"
+                    app:fastScrollVerticalTrackDrawable="@drawable/line_drawable"/>
+
+                <TextView
+                    android:id="@+id/txtOrderEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtHeading"
+                    android:layout_margin="@dimen/small_margin"
+                    android:text="@string/empty_order"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorSecondary"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/small_margin"
+        app:fabSize="auto"
+        app:layout_anchor="@id/orders"
+        app:srcCompat="@mipmap/ic_plus_white"
+        tools:ignore="NotSibling" />
+
+</RelativeLayout>

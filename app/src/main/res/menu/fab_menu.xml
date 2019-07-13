@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_call"
+        android:icon="@mipmap/ic_order"
+        android:title="@string/create_order" />
+    <item
+        android:id="@+id/action_text"
+        android:icon="@mipmap/ic_order"
+        android:title="Create collection" />
+    <item
+        android:id="@+id/action_email"
+        android:icon="@mipmap/ic_order"
+        android:title="@string/add_customer_details" />
+</menu>

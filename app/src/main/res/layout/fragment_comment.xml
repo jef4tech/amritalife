@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/chkDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_12sdp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtDoneDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/chkDone"
+        android:paddingTop="@dimen/_8sdp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/lutRecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lutSend"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/chkDone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvChat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:transcriptMode="alwaysScroll"
+            app:reverseLayout="true"
+            app:stackFromEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom">
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/lutSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom">
+
+        <EditText
+
+            android:id="@+id/edtMessageTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_toLeftOf="@+id/btnSend"
+            android:background="@drawable/message_text_background"
+            android:hint="@string/message_hint"
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine"
+            android:maxLength="10000"
+            android:maxLines="1000"
+            android:minHeight="@dimen/_40sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_10sdp" />
+
+        <EditText
+            android:id="@+id/edtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/message_text_background"
+            android:hint="@string/message_hint"
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine"
+            android:maxLength="10000"
+            android:maxLines="1000"
+            android:minHeight="@dimen/_40sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/spnPercentCompleat"
+            style="?android:attr/spinnerItemStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/edtMessage"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_toLeftOf="@+id/btnSend"
+            android:drawingCacheQuality="high"
+            android:entries="@array/percentage_completion"
+            android:gravity="center"
+            android:paddingRight="@dimen/_10sdp"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/edtMessage"
+            android:layout_marginRight="@dimen/_10sdp"
+
+            android:background="@mipmap/ic_btnsend"
+            android:elevation="@dimen/_5sdp"
+            tools:ignore="RtlHardcoded" />
+    </RelativeLayout>
+
+</RelativeLayout>

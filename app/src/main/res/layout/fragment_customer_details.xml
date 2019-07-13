@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/customerDetailsFragment"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/windowBackGround"
+  android:focusableInTouchMode="true"
+  android:orientation="vertical"
+  tools:context="com.kraftlabs.crm_new.Fragments.CustomerDetailsFragment">
+
+  <ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/box">
+
+      <TextView
+        android:id="@+id/txtHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/heading"
+        android:text="@string/customer_details"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size" />
+
+      <RelativeLayout
+        android:id="@+id/customer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHeading"
+        android:orientation="vertical"
+        android:padding="@dimen/vertical_spacing">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+          android:id="@+id/imgIcon"
+          android:layout_width="@dimen/profile_image_size_small"
+          android:layout_height="@dimen/profile_image_size_small"
+          android:layout_marginTop="@dimen/vertical_spacing"
+          android:src="@mipmap/ic_customer" />
+
+        <TextView
+          android:id="@+id/txtCustomerName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/small_margin"
+          android:layout_toRightOf="@id/imgIcon"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/font_size" />
+
+        <TextView
+          android:id="@+id/txtCustomerCode"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/txtCustomerName"
+          android:layout_marginLeft="@dimen/small_margin"
+          android:layout_toRightOf="@id/imgIcon"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/font_size_small"
+          android:visibility="gone" />
+
+        <TextView
+          android:id="@+id/txtAddress"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/txtCustomerCode"
+          android:layout_marginLeft="@dimen/small_margin"
+          android:layout_toRightOf="@id/imgIcon"
+          android:textSize="@dimen/font_size_small" />
+
+        <TextView
+          android:id="@+id/txtCity"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/txtAddress"
+          android:layout_marginLeft="@dimen/small_margin"
+          android:layout_toRightOf="@id/imgIcon"
+          android:textSize="@dimen/font_size_small" />
+
+        <TextView
+          android:id="@+id/txtPhone"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/txtCity"
+          android:layout_marginLeft="@dimen/small_margin"
+          android:layout_toRightOf="@id/imgIcon"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/font_size_small" />
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:id="@+id/lotCurrentOutstanding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customer"
+        android:elevation="4dp"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin"
+        tools:targetApi="lollipop">
+
+        <TextView
+          android:id="@+id/CurrentOutstanding"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/current_outstanding"
+          android:textAllCaps="true"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/font_size"
+          android:typeface="sans" />
+
+        <TextView
+          android:id="@+id/bw0To30"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/CurrentOutstanding"
+          android:text="@string/_0_30"
+          android:textSize="@dimen/font_size" />
+
+        <TextView
+          android:id="@+id/txt0To30"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/CurrentOutstanding"
+          android:layout_toRightOf="@id/bw0To30"
+          android:gravity="right"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/font_size"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/bw31To60"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/bw0To30"
+          android:text="@string/_31_60"
+          android:textSize="@dimen/font_size" />
+
+        <TextView
+          android:id="@+id/txt31To60"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/bw0To30"
+          android:layout_toRightOf="@+id/bw31To60"
+          android:gravity="right"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/font_size"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/bw61To90"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/bw31To60"
+          android:text="@string/_61_90"
+          android:textSize="@dimen/font_size" />
+
+        <TextView
+          android:id="@+id/txt61To90"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/bw31To60"
+          android:layout_toRightOf="@+id/bw61To90"
+          android:gravity="right"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/font_size"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/bw91To180"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/bw61To90"
+          android:text="@string/_91_180"
+          android:textSize="@dimen/font_size" />
+
+        <TextView
+          android:id="@+id/txt91To180"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/bw61To90"
+          android:layout_toRightOf="@+id/bw91To180"
+          android:gravity="right"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/font_size"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/bw181To365"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/bw91To180"
+          android:text="@string/_181_365"
+          android:textSize="@dimen/font_size" />
+
+        <TextView
+          android:id="@+id/txt181To365"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/bw91To180"
+          android:layout_toRightOf="@+id/bw181To365"
+          android:gravity="right"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/font_size"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/above365"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/bw181To365"
+          android:text="@string/above_365"
+          android:textSize="@dimen/font_size" />
+
+        <TextView
+          android:id="@+id/txtAbove365"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/bw181To365"
+          android:layout_toRightOf="@+id/above365"
+          android:gravity="right"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/font_size"
+          android:textStyle="bold" />
+      </RelativeLayout>
+
+      <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/lotCurrentOutstanding"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+
+        <Button
+          android:id="@+id/btnOrderDetails"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_weight="0"
+          android:background="@drawable/button"
+          android:clickable="true"
+          android:contextClickable="true"
+          android:elevation="5dp"
+          android:text="@string/order_details"
+          android:textColor="@color/textColorInverse"
+          tools:targetApi="m">
+
+        </Button>
+
+
+        <Button
+          android:id="@+id/btnInvoices"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginTop="@dimen/small_margin"
+          android:background="@drawable/button"
+          android:clickable="true"
+          android:elevation="5dp"
+          android:text="@string/invoice"
+          android:textColor="@color/textColorInverse"
+          tools:targetApi="lollipop">
+
+        </Button>
+
+        <Button
+          android:id="@+id/btnDespatch"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginTop="@dimen/small_margin"
+          android:layout_weight="0"
+          android:background="@drawable/button"
+          android:elevation="5dp"
+          android:text="@string/despatch_details"
+          android:textColor="@color/textColorInverse"
+          tools:targetApi="lollipop" />
+
+        <Button
+          android:id="@+id/btnCollection"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginTop="@dimen/small_margin"
+          android:layout_weight="0"
+          android:background="@drawable/button"
+          android:clickable="true"
+          android:elevation="5dp"
+          android:text="@string/collection"
+          android:textColor="@color/textColorInverse"
+          tools:targetApi="lollipop" />
+
+        <Button
+          android:id="@+id/btnAddCustomerDtls"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginTop="@dimen/small_margin"
+          android:layout_weight="0"
+          android:background="@drawable/button"
+          android:clickable="true"
+          android:elevation="5dp"
+          android:text="@string/add_customer_details"
+          android:textColor="@color/textColorInverse"
+          android:visibility="visible"
+          tools:targetApi="lollipop"/>
+
+        <Button
+            android:id="@+id/btnViewCallHistory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_weight="0"
+            android:background="@drawable/button"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:enabled="true"
+            android:linksClickable="true"
+            android:text="@string/show_calls_history"
+            android:textColor="@color/textColorInverse"
+            android:visibility="visible"
+            tools:targetApi="lollipop" />
+
+
+
+      </LinearLayout>
+
+    </RelativeLayout>
+
+  </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_4sdp"
+    android:baselineAligned="false">
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:background="@drawable/box"
+      android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/heading"
+        android:text="@string/additional_details"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size" />
+
+    <ScrollView
+        android:layout_below="@id/txtHeading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilApprTurnOver"
+            android:layout_below="@id/txtHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <EditText
+              android:paddingLeft="@dimen/small_margin"
+              android:layout_below="@id/txtHeading"
+              android:hint="@string/approximate_turn_over"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/edtApprTurnOver" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilCompetitorBrands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <EditText
+              android:paddingLeft="@dimen/small_margin"
+              android:hint="@string/competitor_brands"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/edtCompetitorBrands" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilNoOfEmployees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <EditText
+              android:paddingLeft="@dimen/small_margin"
+              android:layout_below="@id/edtCompetitorBrands"
+              android:hint="@string/no_of_employees"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:inputType="number"
+              android:id="@+id/edtNoOfEmployees" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_marginTop="@dimen/small_margin"
+            android:id="@+id/btnSubmit"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_spacing"
+            android:layout_marginRight="@dimen/horizontal_spacing"
+            android:background="@drawable/button"
+            android:text="@string/submit"
+            android:textColor="@color/textColorInverse"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCapture"
+          android:visibility="gone"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/horizontal_spacing"
+            android:layout_marginRight="@dimen/horizontal_spacing"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/button"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/capture"
+            android:textColor="@color/textColorInverse"
+            android:textStyle="bold" />
+
+        <Button
+          android:id="@+id/btnshowImg"
+          style="?android:textAppearanceSmall"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/small_margin"
+          android:layout_marginLeft="@dimen/horizontal_spacing"
+          android:layout_marginRight="@dimen/horizontal_spacing"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:background="@drawable/button"
+          android:layout_marginTop="@dimen/small_margin"
+          android:text="@string/show_image"
+          android:textColor="@color/textColorInverse"
+          android:textStyle="bold" />
+
+        <Button
+           
+            android:id="@+id/btnPinLocation"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/horizontal_spacing"
+            android:layout_marginRight="@dimen/horizontal_spacing"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/button"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/pinLocation"
+            android:textColor="@color/textColorInverse"
+            android:textStyle="bold" />
+      </LinearLayout>
+    </ScrollView>
+
+  </LinearLayout>
+
+</RelativeLayout>

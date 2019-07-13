@@ -1,0 +1,143 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.kraftlabs.crm_new.Fragments.InvoicesDetailsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box">
+
+        <TextView
+            android:id="@+id/txtHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/heading"
+            android:text="@string/invoice_details"
+            android:textAllCaps="true"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size" />
+
+        <RelativeLayout
+            android:id="@+id/invoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHeading"
+            android:orientation="vertical"
+            android:paddingLeft="3dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="@dimen/profile_image_size_small"
+                android:layout_height="@dimen/profile_image_size_small"
+                android:layout_marginRight="@dimen/vertical_spacing"
+                android:padding="3dip"
+                android:src="@mipmap/ic_invoice"
+                app:riv_corner_radius="@dimen/profile_image_size_small" />
+
+
+            <TextView
+                android:id="@+id/invoiceNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="@string/invoice_no" />
+
+            <TextView
+                android:id="@+id/txtInvoiceNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_toRightOf="@+id/invoiceNumber"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/font_size" />
+
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/invoiceNumber"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_toRightOf="@id/thumbnail"
+                android:text="@string/date" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/invoiceNumber"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_toRightOf="@+id/date"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/font_size" />
+
+            <TextView
+                android:id="@+id/numberOfItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_toRightOf="@id/thumbnail"
+                android:text="@string/number_of_items" />
+
+            <TextView
+                android:id="@+id/txtNumberOfItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_toRightOf="@+id/numberOfItems"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/font_size" />
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/numberOfItems"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_toRightOf="@id/thumbnail"
+                android:text="@string/amount" />
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/numberOfItems"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_toRightOf="@+id/amount"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/font_size" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtEmptyInvoiceDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/invoice"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/small_margin"
+            android:gravity="center"
+            android:text="@string/empty_invoices"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/invoice"
+            android:id="@+id/lstInvoiceDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"/>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

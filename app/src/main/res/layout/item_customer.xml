@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/windowBackGround"
+    android:padding="@dimen/vertical_spacing">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="@dimen/profile_image_size_small"
+        android:layout_height="@dimen/profile_image_size_small"
+        android:layout_marginTop="@dimen/vertical_spacing"
+        android:src="@mipmap/ic_customer" />
+
+    <TextView
+        android:id="@+id/txtCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgIcon"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_toEndOf="@id/imgIcon" />
+
+    <TextView
+        android:id="@+id/txtCustomerCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCustomerName"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgIcon"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size_small"
+        android:layout_toEndOf="@id/imgIcon"
+        android:layout_marginStart="@dimen/small_margin" />
+
+    <TextView
+        android:id="@+id/txtAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCustomerCode"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgIcon"
+        android:textSize="@dimen/font_size_small"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_toEndOf="@id/imgIcon" />
+
+    <TextView
+        android:id="@+id/txtCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAddress"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgIcon"
+        android:textSize="@dimen/font_size_small"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_toEndOf="@id/imgIcon" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCity"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgIcon"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size_small"
+        android:layout_marginStart="@dimen/small_margin"
+        android:text="@string/phone"
+        android:layout_toEndOf="@id/imgIcon" />
+
+    <TextView
+
+        android:id="@+id/textCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCity"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_toRightOf="@id/txtPhone"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size_small"
+        android:layout_marginStart="@dimen/large_margin"
+        android:text="Category:"
+        android:layout_toEndOf="@id/txtPhone" />
+
+    <TextView
+
+        android:id="@+id/txtCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCity"
+        android:layout_toRightOf="@id/textCategory"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size_small"
+        android:text="Category:"
+        android:layout_toEndOf="@id/textCategory" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgAction"
+        android:layout_width="@dimen/button_radius"
+        android:layout_height="@dimen/button_radius"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_select"
+        android:textSize="@dimen/font_size_small"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

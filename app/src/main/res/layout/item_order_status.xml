@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlStatusProduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="@dimen/profile_image_size_small"
+        android:layout_height="@dimen/profile_image_size_small"
+        android:layout_marginTop="@dimen/vertical_spacing"
+        android:src="@mipmap/ic_product" />
+
+    <TextView
+        android:id="@+id/txtProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size" />
+
+    <TextView
+        android:id="@+id/txtProductCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtProductName"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/txtCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtProductCode"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCategory"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPrice"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size_small" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01"
+        android:id="@+id/btnCount"
+        android:layout_below="@id/txtProductName"
+        android:layout_alignParentRight="true"
+        app:bootstrapBrand="secondary"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:showOutline="false"
+        android:layout_marginRight="2dp"
+        app:roundedCorners="true" />
+
+</RelativeLayout>

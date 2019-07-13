@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    tools:context="com.kraftlabs.crm_new.Fragments.CollectionFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box">
+
+        <TextView
+            android:id="@+id/txtHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/heading"
+            android:text="@string/collection"
+            android:textAllCaps="true"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size" />
+
+
+        <TextView
+            android:id="@+id/txtCollectionEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtHeading"
+            android:layout_margin="@dimen/small_margin"
+            android:text="@string/collection_empty"
+            android:textAlignment="center"
+            android:visibility="visible" />
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/lstCollection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtHeading"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            app:fastScrollEnabled="true"
+            app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
+            app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+            app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"
+            app:fastScrollVerticalTrackDrawable="@drawable/line_drawable"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/small_margin"
+            app:fabSize="auto"
+            app:srcCompat="@mipmap/ic_plus_white" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

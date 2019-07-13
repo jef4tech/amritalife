@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/despatch"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:paddingLeft="3dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="@dimen/profile_image_size_small"
+        android:layout_height="@dimen/profile_image_size_small"
+        android:layout_marginRight="@dimen/vertical_spacing"
+        android:padding="3dip"
+        android:src="@mipmap/ic_despatch"
+        app:riv_corner_radius="@dimen/profile_image_size_small" />
+
+    <LinearLayout
+        android:id="@+id/lotOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_toRightOf="@id/thumbnail"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lrno" />
+
+        <TextView
+            android:id="@+id/txtLRNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lotOne"
+        android:layout_toRightOf="@id/thumbnail"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size" />
+    </LinearLayout>
+</RelativeLayout>

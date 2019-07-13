@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:id="@+id/containerProfile"
+    android:clickable="false"
+    android:paddingBottom="@dimen/text_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/large_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="@dimen/profile_image_size"
+        android:clickable="false"
+        android:layout_height="@dimen/profile_image_size"
+        android:src="@mipmap/no_user_profile"
+        app:riv_corner_radius="@dimen/abc_action_bar_stacked_max_height" />
+
+    <TextView
+      android:maxLines="1"
+        android:layout_alignParentTop="true"
+        android:id="@+id/txtVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="Version"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/txtCustomerName"
+        android:textColor="@color/textColorInverse" />
+    <TextView
+      android:maxLines="1"
+      android:id="@+id/txtProfileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+        android:layout_toRightOf="@id/imgProfile"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="Suresh"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/textColorInverse" />
+
+    <TextView
+      android:maxLines="1"
+      android:id="@+id/txtRoleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtProfileName"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+        android:layout_toRightOf="@id/imgProfile"
+        android:text="Sales Representative" />
+
+    <TextView
+      android:maxLines="1"
+      android:visibility="visible"
+        android:id="@+id/lastSync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtRoleName"
+        android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+        android:layout_toRightOf="@id/imgProfile"
+        android:text="Last sync:" />
+
+    <TextView
+      android:maxLines="1"
+      android:visibility="visible"
+        android:id="@+id/txtLastSync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtRoleName"
+        android:layout_toRightOf="@id/lastSync"
+        android:drawableRight="@android:drawable/arrow_down_float"
+        android:text="12:29:12"
+        android:textStyle="bold" />
+
+    <com.kraftlabs.crm_new.libs.expandableLayout.ExpandableLayout.ExpandableLayout
+        android:id="@+id/expandable_layout_1"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLastSync"
+        app:el_duration="600"
+        app:el_expanded="true"
+        app:el_parallax="0.5">
+
+        <RelativeLayout
+
+            android:id="@+id/containerCommon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/containerCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+
+                <TextView
+                  android:maxLines="1"
+                    android:id="@+id/todayCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today calls:" />
+
+                <TextView
+                    android:id="@+id/txtTodayCalls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/todayCall"
+                    android:maxLines="1"
+                    android:text="0"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/finishCalls"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+                    android:layout_toRightOf="@id/txtTodayCalls"
+                    android:maxLines="1"
+                    android:text="Finish:" />
+
+                <TextView
+                    android:id="@+id/txtFinishCalls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/finishCalls"
+                    android:maxLines="1"
+
+                    android:text="0"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pendingCalls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+                    android:layout_toRightOf="@id/txtFinishCalls"
+                    android:maxLines="1"
+                    android:text="Pending:" />
+
+                <TextView
+                    android:id="@+id/txtPendingCalls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/pendingCalls"
+                    android:maxLines="1"
+                    android:text="0"
+                    android:textStyle="bold" />
+
+               
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/containerTasks"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/containerCall">
+
+
+                <TextView
+                    android:id="@+id/todayTasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Today tasks:" />
+
+                <TextView
+                    android:id="@+id/txtTodayTasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/todayTasks"
+                    android:maxLines="1"
+                    android:text="0"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/finishTasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+                    android:layout_toRightOf="@id/txtTodayTasks"
+                    android:maxLines="1"
+                    android:text="Finish:" />
+
+                <TextView
+                    android:id="@+id/txtFinishTasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/finishTasks"
+                    android:maxLines="1"
+
+                    android:text="0"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pendingTasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+                    android:layout_toRightOf="@id/txtFinishTasks"
+                    android:maxLines="1"
+                    android:text="Total Pending:" />
+
+                <TextView
+                    android:id="@+id/txtPendingTasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/pendingTasks"
+                    android:maxLines="1"
+
+                    android:text="0"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/containerOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/containerTasks">
+
+
+                <TextView
+                    android:id="@+id/todayOrders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Today orders:" />
+
+                <TextView
+                    android:id="@+id/txtTodayOrders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/todayOrders"
+                    android:maxLines="1"
+                    android:text="0"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/draft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+                    android:layout_toRightOf="@id/txtTodayOrders"
+                    android:maxLines="1"
+                    android:text="Drafts:" />
+
+                <TextView
+                    android:id="@+id/txtDrafts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/draft"
+                    android:maxLines="1"
+
+                    android:text="0"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+                    android:layout_toRightOf="@id/txtDrafts"
+                    android:maxLines="1"
+                    android:text="Send:" />
+
+                <TextView
+                    android:id="@+id/txtSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/send"
+                    android:maxLines="1"
+
+                    android:text="0"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.kraftlabs.crm_new.libs.expandableLayout.ExpandableLayout.ExpandableLayout>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/sync_menu_group">
+
+    <item
+        android:actionLayout="@layout/feed_update_count"
+        android:id="@+id/action_sync"
+        android:icon="@drawable/ic_menu_cart"
+        android:title="@string/sync"
+        app:showAsAction="always"/>
+</group>
+   <!-- <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/ic_menu_cart"
+        android:title="@string/action_cart"
+        app:showAsAction="always" />-->
+
+</menu>

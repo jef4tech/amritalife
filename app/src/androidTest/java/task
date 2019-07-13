@@ -1,0 +1,180 @@
+get order in last one month,last 3 mont,last 6 month
+  select * ,(select order_date from orders where orders.order_id = order_items.order_id) as order_item_date  from order_items oi LEFT JOIN orders ON oi.orders_id = orders.order_id group by product_code
+
+
+      ,count(id)
+
+
+   "SELECT *,(select count(id) from call_comment where call_comment.customer_id = calls.customer_id) as count_comment FROM "
+    + DATABASE_TABLE + " rc JOIN " + CustomersDB.DATABASE_TABLE + " c " + " ON rc.customer_id = c.store_id LEFT JOIN calls ON
+    rc.route_customer_id = calls.route_customer_id AND rc.customer_id = calls.customer_id WHERE rc.route_customer_id = ?
+    ORDER BY sort_order ASC"
+
+
+(select count(id) from call_comment where call_comment.customer_id = calls.customer_id)
+
+
+select product_name,order_date from order_items o left join orders on orders.order_id=o.order_id
+
+
+SELECT *,(select count(id) from call_comment where call_comment.customer_id = calls.customer_id) as count_comment  FROM route_customers rc JOIN customers c ON rc.customer_id = c.store_id LEFT JOIN calls ON rc.route_customer_id = calls.route_customer_id where calls.status = "visited"   ORDER BY sort_order ASC
+
+
+collectio--paymentReceived
+orderBooked--orderReceived
+informationConvered--remark
+productPrescribed--ProductsDiscussed
+KEY_SAMPLES_GIVEN--NextVisitedDate
+
+
+rc.route_customer_id as route_customer_id
+rc.route_id as route_id
+rc.customer_id as
+
+
+
+
+SELECT rc.route_customer_id,rc.route_id,rc.customer_id,rc.latitude,rc.longitude,c.customer_name,c.customer_code,c.address,calls.call_id,calls.status,calls.payment_received,calls.order_received,calls.remarks,calls.next_visit_date,calls.sync_status,(select count(id) from call_comment where call_comment.customer_id = calls.customer_id) as count_comment FROM route_customers rc JOIN customers c  ON rc.customer_id = c.store_id LEFT JOIN calls ON rc.route_customer_id = calls.route_customer_id AND rc.customer_id = calls.customer_id
+
+
+===============================================================================================================================
+Get Orders statistics
+
+---Get order with date:
+select count(product_id),product_name,o.order_date from order_items oi left join orders o on o.order_id=oi.order_id group by product_id
+
+
+
+
+
+
+SELECT oi.order_id,oi.product_name,oi.product_code,oi.quantity,oi.price,oi.product_id,oi.category, count(product_id) as product_count,o.order_date as item_date from order_items oi left join orders o on o.order_id=oi.order_id WHERE item_date BETWEEN datetime('now', '-1 days') AND datetime('now', 'localtime') group by oi.product_id order by product_count desc
+
+
+
+SELECT oi.order_id,oi.product_name,oi.product_code,oi.quantity,oi.price,oi.product_id,oi.category, count(product_id) as product_count,o.order_date as item_date from order_items oi left join orders o on o.order_id=oi.order_id WHERE item_date >= >= datetime('now','-1 hours') group by oi.product_id order by product_count desc
+
+
+SELECT oi.order_id,oi.product_name,oi.product_code,oi.quantity,oi.price,oi.product_id,oi.category, count(product_id) as product_count,o.order_date as item_date from order_items oi left join orders o on o.order_id=oi.order_id WHERE item_date BETWEEN datetime('now', '-180 days') AND datetime('now', 'localtime') group by oi.product_id order by product_count desc
+
+  ////////////////////////////////////////////////////
+  SELECT oi.order_id,oi.product_name,oi.product_code,oi.quantity,oi.price,oi.product_id,oi.category, count(product_id) as product_count,o.order_date as item_date,count(oi.product_id) from order_items oi left join orders o on o.order_id=oi.order_id WHERE strftime('%m', item_date) = '11' group by oi.product_id order by product_count desc
+
+
+  SELECT * FROM workoutPlan WHERE strftime('%m', date) = '11'
+
+select c.store_id,c.store_name,c.store_code,c.phone,o.id,o.order_id,o.customer_id,oi.order_id,oi.product_id,count(oi.product_id) from customers c left join order_items oi on oi.order_id=o.id left join orders o on o.customer_id=c.store_id where oi.product_id=338 group by o.customer_id
+
+
+1
+2
+7
+20
+22
+25
+50
+
+
+SELECT rc.route_customer_id as route_customer_id,rc.route_id as route_id,rc.customer_id as customer_id,rc.place as place,rc.date as date,c.phone as phone,c.state as state,c.city as city,c.type as type,rc.latitude as latitude,rc.longitude as longitude,c.store_name as customer_name,c.store_code as customer_code,c.address as address,calls.call_id as call_id,calls.status as status,calls.payment_received as payment_received,calls.order_received as order_received,calls.remarks as remarks,calls.next_visit_date as next_visit_date,calls.product_discussed as product_discussed,calls.sync_status as sync_status,(select count(id) from call_comment where call_comment.customer_id = calls.customer_id) as count_comment FROM route_customers rc JOIN customers c ON rc.customer_id = c.store_id LEFT JOIN calls ON rc.route_customer_id = calls.route_customer_id AND rc.customer_id = calls.customer_id WHERE rc.route_customer_id = 577 and status is null or status !="Visited" ORDER BY sort_order ASC
+
+
+
+
+
+/*
+ <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/img_imageView"
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      android:layout_marginBottom="42dp"
+      android:layout_marginEnd="77dp"
+      android:layout_marginStart="77dp"
+      android:maxWidth="@dimen/profile_image_size"
+      android:minWidth="@dimen/profile_image_size"
+      android:src="@mipmap/no_user_profile"
+      app:layout_constraintBottom_toTopOf="@+id/edtTxt_Username"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/button2"
+      app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+  <Button
+      android:id="@+id/button2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="39dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:background="@mipmap/ic_camera"
+      android:visibility="gone"
+      app:layout_constraintBottom_toTopOf="@+id/img_imageView"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+  <TextView
+      android:id="@+id/edtTxt_Username"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="31dp"
+      android:text="@string/profile_name"
+      android:textColor="@color/textColor"
+      android:textSize="@dimen/_17sdp"
+      android:textStyle="normal"
+      app:layout_constraintBottom_toTopOf="@+id/edtTxt_role"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/img_imageView" />
+
+  <TextView
+      android:id="@+id/edtTxt_role"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="15dp"
+      android:text="@string/role"
+      android:textColor="@color/textColor"
+      android:textSize="@dimen/_14sdp"
+      app:layout_constraintBottom_toTopOf="@+id/btn_resetPassword"
+      app:layout_constraintStart_toStartOf="@+id/edtTxt_Username"
+      app:layout_constraintTop_toBottomOf="@+id/edtTxt_Username" />
+
+
+  <Button
+      android:id="@+id/btn_resetPassword"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginBottom="40dp"
+      android:background="@android:drawable/screen_background_light_transparent"
+      android:clickable="true"
+      android:gravity="left|center"
+      android:paddingLeft="@dimen/_15sdp"
+      android:text="@string/reset_password"
+      android:textColor="@color/textColor"
+      android:textSize="@dimen/_14sdp"
+      app:layout_constraintBottom_toTopOf="@+id/btn_save_profile"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtTxt_role" />
+
+  />
+
+
+  <Button
+      android:id="@+id/btn_save_profile"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="9dp"
+      android:background="@drawable/button"
+      android:clickable="true"
+      android:text="Save"
+      android:textColor="@color/textColorInverse"
+      android:textSize="@dimen/_19sdp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btn_resetPassword" />
+*/
+
+
+
+------------------------------------------------------------------------------------------My sql ---------------------------------------
+select smStoreName,smStoreCode,smId,rep_name,place,latitude,longitude,last_updated_dated,is_location_valid,device_id,address from storemaster where rep_name like "JITHESH" or rep_name like "jithesh" limit 0,2000
+

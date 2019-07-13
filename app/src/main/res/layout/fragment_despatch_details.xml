@@ -1,0 +1,166 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context="com.kraftlabs.crm_new.Fragments.DespatchDetailsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box">
+
+        <TextView
+
+            android:id="@+id/txtHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/heading"
+            android:text="@string/despatch_details"
+            android:textAllCaps="true"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size" />
+
+
+        <TextView
+            android:id="@+id/txtDespatchEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtHeading"
+            android:layout_margin="@dimen/small_margin"
+            android:gravity="center"
+            android:text="@string/empty_despatch"
+            android:textAlignment="center"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lstDespatchDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtHeading"
+            android:layout_margin="@dimen/small_margin"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lstDespatchDetails"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:id="@+id/details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:paddingLeft="@dimen/small_margin"
+                    android:paddingTop="@dimen/small_margin">
+
+                    <TextView
+                        android:id="@+id/numberOfBoxes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_of_boxes" />
+
+                    <TextView
+                        android:id="@+id/txtNoOfBoxes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_toRightOf="@+id/numberOfBoxes"
+                        android:text="44"
+                        android:textColor="@color/textColor" />
+
+                    <TextView
+                        android:id="@+id/invoiceNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/numberOfBoxes"
+                        android:text="@string/invoice_no" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/numberOfBoxes"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_toRightOf="@+id/invoiceNo"
+                        android:text="invss"
+                        android:textColor="@color/textColor" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:paddingLeft="@dimen/small_margin"
+                    android:paddingTop="@dimen/small_margin">
+
+                    <TextView
+                        android:id="@+id/lrDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lr_date" />
+
+                    <TextView
+                        android:id="@+id/txtLrDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_toRightOf="@+id/lrDate"
+                        android:text="ree"
+                        android:textColor="@color/textColor" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lrDate"
+                        android:text="@string/date" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lrDate"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_toRightOf="@+id/date"
+                        android:text="dfd"
+                        android:textColor="@color/textColor" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/small_margin"
+                android:paddingLeft="@dimen/small_margin">
+
+                <TextView
+                    android:id="@+id/transDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transport_details" />
+
+                <TextView
+                    android:id="@+id/txtTransDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@+id/transDetails"
+                    android:text="dsfsd"
+                    android:textColor="@color/textColor" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

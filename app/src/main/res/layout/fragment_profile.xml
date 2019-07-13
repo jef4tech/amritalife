@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/activityProfileFragment"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:padding="0dp">
+
+  <ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical">
+
+      <FrameLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/imags_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+          android:layout_gravity="center"
+          app:civ_border_width="2dp"
+          app:civ_border_color="@color/colorPrimaryDark"
+          android:id="@+id/img_imageView"
+          android:layout_width="@dimen/_80sdp"
+          android:layout_height="@dimen/_80sdp"
+          android:layout_weight="1"
+          android:maxWidth="@dimen/profile_image_size"
+          android:minWidth="@dimen/profile_image_size"
+          android:src="@mipmap/no_user_profile" />
+
+        <Button
+          android:visibility="invisible"
+          android:layout_gravity="center|bottom"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+
+
+      </FrameLayout>
+
+
+      <LinearLayout
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:id="@+id/name_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/edtTxt_Username"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="0"
+          android:textColor="@color/textColor"
+          android:text="@string/profile_name"
+          android:textSize="@dimen/_17sdp"
+          android:textStyle="normal" />
+
+        <TextView
+          android:id="@+id/edtTxt_role"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/textColor"
+          android:layout_below="@+id/edtTxt_Username"
+          android:layout_weight="0"
+          android:text="@string/role"
+          android:textSize="@dimen/_14sdp" />
+
+      </LinearLayout>
+
+
+      <Button
+        android:drawableRight="@mipmap/ic_lock_outline_deep_purple_900_24dp"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_marginTop="40dp"
+        android:paddingRight="10dp"
+
+        android:background="@color/colorPrimaryLight"
+        android:id="@+id/btn_resetPassword"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.67"
+        android:clickable="true"
+        android:textAllCaps="false"
+        android:gravity="left|center"
+        android:paddingLeft="@dimen/_15sdp"
+        android:text="@string/reset_password"
+        android:textSize="@dimen/_14sdp" />
+
+      <Button
+        android:background="@color/colorPrimaryLight"
+        android:layout_marginTop="8dp"
+        android:paddingRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.67"
+        android:clickable="true"
+        android:gravity="left|center"
+        android:text="@string/settings"
+        android:textAllCaps="false"
+        android:enabled="false"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:paddingLeft="@dimen/_15sdp"
+        android:textSize="@dimen/_14sdp" />
+
+      <Button
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_marginTop="8dp"
+        android:paddingRight="10dp"
+        android:background="@color/colorPrimaryLight"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.67"
+        android:clickable="true"
+        android:gravity="left|center"
+        android:text="Go back"
+        android:textAllCaps="false"
+        android:enabled="false"
+        android:paddingLeft="@dimen/_15sdp"
+        android:textSize="@dimen/_14sdp" />
+
+
+      <Button
+        android:enabled="false"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:id="@+id/btn_save_profile"
+        android:layout_marginRight="@dimen/large_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reset_linear"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:textColor="@color/textColorInverse"
+        android:background="@drawable/button"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_19sdp"
+        tools:targetApi="lollipop" />
+
+
+    </LinearLayout>
+  </ScrollView>
+
+
+</RelativeLayout>

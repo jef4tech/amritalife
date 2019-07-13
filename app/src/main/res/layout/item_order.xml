@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/vertical_spacing">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="@dimen/profile_image_size_small"
+        android:layout_height="@dimen/profile_image_size_small"
+        android:layout_marginTop="@dimen/vertical_spacing"
+        android:src="@mipmap/ic_order" />
+
+    <TextView
+        android:id="@+id/txtCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size" />
+
+    <TextView
+        android:id="@+id/txtOrderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCustomerName"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/txtOrderDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtOrderNumber"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textSize="@dimen/font_size_small" />
+
+    <LinearLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtOrderDate"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_toRightOf="@+id/imgProfile"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_items"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/txtNumberOfItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="end"
+                android:textColor="@color/textColor"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/gross_amount"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/txtGrossAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="end"
+                android:textColor="@color/textColor"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtCustomerName"
+        android:layout_gravity="top"
+        android:text="status"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/txtSyncStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtStatus"
+        android:textColor="@color/warning"
+        android:textSize="@dimen/font_size_extra_small" />
+</RelativeLayout>

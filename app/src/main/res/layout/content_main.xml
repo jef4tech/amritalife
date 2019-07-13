@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackGround"
+    tools:context="com.kraftlabs.crm_new.Activities.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/interminate"
+        android:paddingTop="100dp"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <FrameLayout
+        android:id="@+id/content_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/fragment_horizontal_margin"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+</RelativeLayout>

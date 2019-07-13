@@ -1,0 +1,1 @@
+package com.kraftlabs.crm_new.Util;import android.Manifest;/** * User: Ashik * Date: 30-Jul-18 * Time: 4:44 PM */public class Constants {    public static final String[] PERMISSION_LOCATION = {Manifest.permission.ACCESS_FINE_LOCATION};}

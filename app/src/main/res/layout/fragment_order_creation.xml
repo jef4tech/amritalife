@@ -1,0 +1,208 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box">
+
+        <TextView
+            android:id="@+id/txtHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/heading"
+            android:text="@string/details"
+            android:textAllCaps="true"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size" />
+
+        <LinearLayout
+            android:id="@+id/incCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHeading">
+
+            <include
+                layout="@layout/item_customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/incCustomer"
+            android:layout_margin="@dimen/small_margin"
+            android:layout_toRightOf="@+id/imgIcon"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_items"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/txtNumberOfItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="end"
+                    android:textColor="@color/textColor"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/gross_amount"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/txtGrossAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="end"
+                    android:textColor="@color/textColor"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/details"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="@dimen/small_margin"
+        android:background="@drawable/box">
+
+        <TextView
+            android:id="@+id/txtItemsHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/heading"
+            android:text="@string/items"
+            android:textAllCaps="true"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lstCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtItemsHeading"
+            android:layout_margin="@dimen/small_margin"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp" />
+
+        <TextView
+            android:id="@+id/txtOrderItemEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtItemsHeading"
+            android:layout_margin="@dimen/small_margin"
+            android:text="@string/empty_order_item"
+            android:textAlignment="center"
+            android:textColor="@color/textColorSecondary"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignLeft="@+id/details"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/details"
+        android:gravity="top">
+
+        <Button
+            android:id="@+id/btnAddItems"
+            style="?android:textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/vertical_spacing"
+            android:background="@drawable/small_button"
+            android:text="@string/add_items"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorInverse"
+            android:textStyle="bold"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/btnAddItems">
+
+            <Button
+                android:id="@+id/btnPartialSave"
+                style="?android:textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/vertical_spacing"
+                android:background="@drawable/small_button"
+                android:text="@string/draft"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorInverse"
+                android:textStyle="bold"
+                android:theme="@android:style/Theme.Black.NoTitleBar" />
+
+            <Button
+                android:id="@+id/btnOk"
+                style="?android:textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/vertical_spacing"
+                android:background="@drawable/small_button"
+                android:text="@string/ok"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorInverse"
+                android:textStyle="bold"
+                android:theme="@android:style/Theme.Black.NoTitleBar"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnSave"
+                style="?android:textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/vertical_spacing"
+                android:layout_toLeftOf="@+id/btnPartialSave"
+                android:background="@drawable/small_button"
+                android:text="@string/send"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorInverse"
+                android:textStyle="bold"
+                android:theme="@android:style/Theme.Black.NoTitleBar" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.kraftlabs.crm_new.Fragments.OrderDetailsFragment">
+
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box">
+
+        <TextView
+            android:id="@+id/txtHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/heading"
+            android:text="@string/details"
+            android:textAllCaps="true"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size" />
+
+        <LinearLayout
+            android:id="@+id/incDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHeading">
+
+            <include
+                layout="@layout/item_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details"
+        android:layout_marginTop="@dimen/small_margin"
+        android:background="@drawable/box">
+
+        <TextView
+            android:id="@+id/txtItemsHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/heading"
+            android:text="@string/items"
+            android:textAllCaps="true"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lstCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtItemsHeading"
+            android:layout_margin="@dimen/small_margin"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            app:fastScrollEnabled="true"
+            app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
+            app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+            app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"
+            app:fastScrollVerticalTrackDrawable="@drawable/line_drawable"/>
+
+        <TextView
+            android:id="@+id/txtOrderItemEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtItemsHeading"
+            android:layout_margin="@dimen/small_margin"
+            android:text="@string/empty_order_item"
+            android:textAlignment="center"
+            android:textColor="@color/textColorSecondary"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true">
+
+        <Button
+            android:id="@+id/btnSyncOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/vertical_spacing"
+            android:background="@drawable/small_button"
+            android:text="@string/send"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorInverse"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_margin="@dimen/vertical_spacing"
+            android:id="@+id/btnSupplyStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btnSyncOrder"
+            android:background="@drawable/small_button"
+            android:text="Supply Status"
+            android:textColor="@color/textColorInverse"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btnSupplyStatus">
+
+            <Button
+                android:id="@+id/btnOk"
+                style="?android:textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/vertical_spacing"
+                android:background="@drawable/small_button"
+                android:text="@string/ok"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorInverse"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

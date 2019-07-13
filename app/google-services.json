@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "825615005316",
+    "firebase_url": "https://crm-new-45036.firebaseio.com",
+    "project_id": "crm-new-45036",
+    "storage_bucket": "crm-new-45036.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825615005316:android:46dcc549c0428e72",
+        "android_client_info": {
+          "package_name": "com.kraftlabs.crm_new"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALToKyDyja31xp_dixNTWU7GYofoqw1oI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825615005316-rupeco63d177linaihmninau929tucsm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
